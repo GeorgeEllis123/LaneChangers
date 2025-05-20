@@ -15,7 +15,7 @@ public class LaneGenerator : MonoBehaviour
     private GameObject player;
     private int level = 0;
     private int numberOfLanes; // = level * 1.5 + 2
-    private int length; // length of the level = # 75 + 5 * #-lanes
+    private int length; // length of the level = # 75 + 7 * #-lanes
     private int numberOfCarsPerLane; // = length / 5 + level * 1.5
 
     public static LaneGenerator Instance
@@ -56,7 +56,7 @@ public class LaneGenerator : MonoBehaviour
         Debug.Log("Generating Lanes...");
 
         numberOfLanes = (int) (level * 1.5) + 2;
-        length = 75 + 5 * numberOfLanes;
+        length = 75 + 7 * numberOfLanes;
         float laneWidth = lane.transform.localScale.x;
 
         for (int i = 0; i < numberOfLanes; i++)

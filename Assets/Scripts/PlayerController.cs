@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
             {
                 transform.Translate(new Vector3(laneWidth, 0, 0));
                 currentLane++;
-                needToResetBlinker = true;
+                blinker = 0;
             }
         }
         if (Input.GetKeyDown("a") && blinker <= -1 && !needToResetBlinker)
@@ -86,25 +86,24 @@ public class PlayerController : MonoBehaviour
             {
                 transform.Translate(new Vector3(-laneWidth, 0, 0));
                 currentLane--;
-                needToResetBlinker = true;
+                blinker = 0;
             }
         }
     }
 
     private void UpdateBlinker()
     {
-        if (Input.GetMouseButtonDown(0) && blinker == 0)
+        if (Input.GetMouseButtonDown(0))
         {
             blinker = -1;
         }
-        if (Input.GetMouseButtonDown(1) && blinker == 0)
+        if (Input.GetMouseButtonDown(1))
         {
             blinker = 1;
         }
         if (Input.GetKeyDown("space"))
         {
             blinker = 0;
-            needToResetBlinker = false;
         }
     }
 
