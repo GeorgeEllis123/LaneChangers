@@ -23,3 +23,8 @@ The player must navigate from the far left lane to the right lane before they mi
 ## Play it Yourself!
 
 https://play.unity.com/en/games/40349b02-c3d1-4feb-99ab-9626eed2fa96/lane-changers 
+
+
+## License
+
+This project is licensed under the MIT License.
